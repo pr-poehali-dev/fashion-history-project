@@ -16,6 +16,7 @@ interface Garment {
   color: string;
   accent: string;
   emoji: string;
+  image: string;
 }
 
 const GARMENTS: Garment[] = [
@@ -31,6 +32,7 @@ const GARMENTS: Garment[] = [
     color: '#2d1b0e',
     accent: '#8b3a0f',
     emoji: '👗',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Dress_%28robe_volante%29_MET_DP168576.jpg/400px-Dress_%28robe_volante%29_MET_DP168576.jpg',
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ const GARMENTS: Garment[] = [
     color: '#1a1a2e',
     accent: '#4a3060',
     emoji: '🎩',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Man%27s_coat_%28habit%29_MET_DP252889.jpg/400px-Man%27s_coat_%28habit%29_MET_DP252889.jpg',
   },
   {
     id: 3,
@@ -57,6 +60,7 @@ const GARMENTS: Garment[] = [
     color: '#1e0a0a',
     accent: '#8b1a1a',
     emoji: '🎭',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dress_MET_1975.129.1_F.jpg/400px-Dress_MET_1975.129.1_F.jpg',
   },
   {
     id: 4,
@@ -70,6 +74,7 @@ const GARMENTS: Garment[] = [
     color: '#1a0e1a',
     accent: '#7a3a6a',
     emoji: '🌸',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Robe_%C3%A0_la_fran%C3%A7aise_MET_DP251139.jpg/400px-Robe_%C3%A0_la_fran%C3%A7aise_MET_DP251139.jpg',
   },
   {
     id: 5,
@@ -83,6 +88,7 @@ const GARMENTS: Garment[] = [
     color: '#0e1a0e',
     accent: '#2a6a3a',
     emoji: '🍃',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Robe_%C3%A0_la_polonaise_MET_DP251143.jpg/400px-Robe_%C3%A0_la_polonaise_MET_DP251143.jpg',
   },
   {
     id: 6,
@@ -96,6 +102,7 @@ const GARMENTS: Garment[] = [
     color: '#0a100a',
     accent: '#1a4a2a',
     emoji: '⚜️',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Court_coat_MET_DP251587.jpg/400px-Court_coat_MET_DP251587.jpg',
   },
   {
     id: 7,
@@ -109,6 +116,7 @@ const GARMENTS: Garment[] = [
     color: '#12120a',
     accent: '#5a5a1a',
     emoji: '🏛️',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Evening_dress_MET_DP161454.jpg/400px-Evening_dress_MET_DP161454.jpg',
   },
   {
     id: 8,
@@ -122,6 +130,7 @@ const GARMENTS: Garment[] = [
     color: '#081a0a',
     accent: '#1a5a1a',
     emoji: '🌿',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ball_gown_MET_DP251601.jpg/400px-Ball_gown_MET_DP251601.jpg',
   },
   {
     id: 9,
@@ -135,6 +144,7 @@ const GARMENTS: Garment[] = [
     color: '#1a0810',
     accent: '#5a1a30',
     emoji: '💎',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Evening_dress_MET_DP251619.jpg/400px-Evening_dress_MET_DP251619.jpg',
   },
 ];
 
@@ -213,17 +223,31 @@ const Lightbox = ({ garment, onClose }: LightboxProps) => {
 
         <div className="flex flex-col md:flex-row">
           <div
-            className="w-full md:w-64 h-64 md:h-auto flex-shrink-0 flex items-center justify-center relative overflow-hidden"
+            className="w-full md:w-64 h-72 md:h-auto flex-shrink-0 relative overflow-hidden"
             style={{ background: `linear-gradient(135deg, ${garment.color} 0%, ${garment.accent}55 100%)` }}
           >
-            <div className="text-8xl" style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.5))' }}>
+            <img
+              src={garment.image}
+              alt={garment.title}
+              className="w-full h-full object-cover object-top"
+              style={{ filter: 'sepia(15%) brightness(0.9)' }}
+              onError={e => {
+                (e.currentTarget as HTMLImageElement).style.display = 'none';
+                const fb = (e.currentTarget as HTMLImageElement).nextElementSibling as HTMLElement;
+                if (fb) fb.style.display = 'flex';
+              }}
+            />
+            <div
+              className="w-full h-full items-center justify-center text-8xl"
+              style={{ display: 'none', background: `linear-gradient(135deg, ${garment.color} 0%, ${garment.accent}55 100%)` }}
+            >
               {garment.emoji}
             </div>
             <div className="absolute inset-0" style={{
-              background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)'
+              background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)'
             }} />
             <div className="absolute bottom-4 left-4 right-4 text-center">
-              <span className="font-display text-xs tracking-widest uppercase" style={{ color: 'var(--gold)', opacity: 0.7 }}>
+              <span className="font-display text-xs tracking-widest uppercase" style={{ color: 'var(--gold)', opacity: 0.85 }}>
                 {garment.origin}
               </span>
             </div>
@@ -278,18 +302,32 @@ const GarmentCard = ({ garment, onClick, index }: GarmentCardProps) => (
   >
     <CornerOrnaments />
     <div
-      className="relative h-56 flex items-center justify-center overflow-hidden"
+      className="relative h-64 overflow-hidden"
       style={{ background: `linear-gradient(135deg, ${garment.color} 0%, ${garment.accent}66 100%)` }}
     >
-      <span className="text-7xl transition-transform duration-500 group-hover:scale-110">
+      <img
+        src={garment.image}
+        alt={garment.title}
+        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        style={{ filter: 'sepia(20%) brightness(0.85) contrast(1.05)' }}
+        onError={e => {
+          (e.currentTarget as HTMLImageElement).style.display = 'none';
+          const fb = (e.currentTarget as HTMLImageElement).nextElementSibling as HTMLElement;
+          if (fb) fb.style.display = 'flex';
+        }}
+      />
+      <div
+        className="w-full h-full absolute inset-0 items-center justify-center text-7xl"
+        style={{ display: 'none', background: `linear-gradient(135deg, ${garment.color} 0%, ${garment.accent}66 100%)` }}
+      >
         {garment.emoji}
-      </span>
+      </div>
       <div className="absolute inset-0" style={{
-        background: 'radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%)'
+        background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)'
       }} />
       <div
         className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{ background: 'rgba(10,6,3,0.7)' }}
+        style={{ background: 'rgba(10,6,3,0.6)' }}
       >
         <div className="flex items-center gap-2 font-display tracking-widest text-xs uppercase" style={{ color: 'var(--gold)' }}>
           <Icon name="ZoomIn" size={16} />
@@ -378,14 +416,23 @@ export default function Index() {
       {/* Hero */}
       <section
         className="relative overflow-hidden py-24 md:py-36"
-        style={{ background: 'linear-gradient(180deg, rgba(40,20,5,0.6) 0%, transparent 100%)' }}
+        style={{ minHeight: '80vh', display: 'flex', alignItems: 'center' }}
       >
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(201,168,76,0.3) 40px, rgba(201,168,76,0.3) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,168,76,0.3) 40px, rgba(201,168,76,0.3) 41px)`,
-          }}
-        />
+        {/* Historical background image */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Paolo_Veronese_-_The_Wedding_at_Cana_-_WGA24698.jpg/1280px-Paolo_Veronese_-_The_Wedding_at_Cana_-_WGA24698.jpg"
+            alt=""
+            className="w-full h-full object-cover object-top"
+            style={{ filter: 'sepia(60%) brightness(0.35) contrast(1.1)', transform: 'scale(1.05)' }}
+          />
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(180deg, rgba(8,5,2,0.55) 0%, rgba(8,5,2,0.72) 60%, rgba(8,5,2,0.97) 100%)',
+          }} />
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(ellipse at center, transparent 30%, rgba(8,5,2,0.5) 100%)',
+          }} />
+        </div>
 
         <div className="relative max-w-4xl mx-auto px-6 text-center animate-fade-in">
           <div className="ornament-line mb-8">
