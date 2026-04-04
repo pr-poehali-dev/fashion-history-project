@@ -421,16 +421,16 @@ export default function Index() {
         {/* Historical background image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Paolo_Veronese_-_The_Wedding_at_Cana_-_WGA24698.jpg/1280px-Paolo_Veronese_-_The_Wedding_at_Cana_-_WGA24698.jpg"
+            src="https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/59ba6053-5c23-4401-8fd3-592be252e408.png"
             alt=""
-            className="w-full h-full object-cover object-top"
-            style={{ filter: 'sepia(60%) brightness(0.35) contrast(1.1)', transform: 'scale(1.05)' }}
+            className="w-full h-full object-cover object-center"
+            style={{ transform: 'scale(1.03)' }}
           />
           <div className="absolute inset-0" style={{
-            background: 'linear-gradient(180deg, rgba(8,5,2,0.55) 0%, rgba(8,5,2,0.72) 60%, rgba(8,5,2,0.97) 100%)',
+            background: 'linear-gradient(180deg, rgba(8,5,2,0.45) 0%, rgba(8,5,2,0.65) 55%, rgba(8,5,2,0.97) 100%)',
           }} />
           <div className="absolute inset-0" style={{
-            background: 'radial-gradient(ellipse at center, transparent 30%, rgba(8,5,2,0.5) 100%)',
+            background: 'radial-gradient(ellipse at center, transparent 20%, rgba(8,5,2,0.4) 100%)',
           }} />
         </div>
 
@@ -442,13 +442,13 @@ export default function Index() {
           </div>
 
           <h1
-            className="font-display leading-none mb-6"
-            style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', color: 'var(--gold-light)' }}
+            className="font-display leading-tight mb-6"
+            style={{ fontSize: 'clamp(3.5rem, 10vw, 8rem)', color: 'var(--gold-light)', textShadow: '0 2px 40px rgba(0,0,0,0.8)' }}
           >
-            HISTORIA
+            Мода
             <br />
-            <span className="font-fell italic" style={{ color: 'var(--parchment)', opacity: 0.7, fontSize: '0.55em' }}>
-              Мода сквозь века
+            <span className="font-fell italic" style={{ color: 'var(--parchment)', opacity: 0.85, fontSize: '0.5em' }}>
+              XVII–XIX веков
             </span>
           </h1>
 
