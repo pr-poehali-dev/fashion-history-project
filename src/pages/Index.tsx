@@ -32,7 +32,7 @@ const GARMENTS: Garment[] = [
     color: '#2d1b0e',
     accent: '#8b3a0f',
     emoji: '👗',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Dress_%28robe_volante%29_MET_DP168576.jpg/400px-Dress_%28robe_volante%29_MET_DP168576.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/44342012-c860-4c06-9246-63a429ac0be5.png',
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ const GARMENTS: Garment[] = [
     color: '#1a1a2e',
     accent: '#4a3060',
     emoji: '🎩',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Man%27s_coat_%28habit%29_MET_DP252889.jpg/400px-Man%27s_coat_%28habit%29_MET_DP252889.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/1b896e68-44ee-4e2b-a2b1-1495a2b784d8.png',
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const GARMENTS: Garment[] = [
     color: '#1e0a0a',
     accent: '#8b1a1a',
     emoji: '🎭',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dress_MET_1975.129.1_F.jpg/400px-Dress_MET_1975.129.1_F.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/b7d234ae-8616-4e3d-8327-8b4514a967a5.png',
   },
   {
     id: 4,
@@ -74,7 +74,7 @@ const GARMENTS: Garment[] = [
     color: '#1a0e1a',
     accent: '#7a3a6a',
     emoji: '🌸',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Robe_%C3%A0_la_fran%C3%A7aise_MET_DP251139.jpg/400px-Robe_%C3%A0_la_fran%C3%A7aise_MET_DP251139.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/06575ddd-f19f-4052-ac17-06a5db413a4b.png',
   },
   {
     id: 5,
