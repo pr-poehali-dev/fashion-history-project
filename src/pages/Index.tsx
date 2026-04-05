@@ -506,9 +506,19 @@ export default function Index() {
       {/* Gallery */}
       <main className="max-w-6xl mx-auto px-6 py-16">
         {activeSection === 'home' ? (
-          CENTURIES.map(century => (
-            <section key={century} className="mb-20">
-              <div className="flex items-center gap-6 mb-10">
+          CENTURIES.map((century, ci) => (
+            <section key={century} className="mb-20 relative rounded-lg overflow-hidden">
+              {ci > 0 && (
+                <div className="absolute inset-0 -mx-2 rounded-lg overflow-hidden pointer-events-none">
+                  <img
+                    src="https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/14c45784-2710-45e4-a9b5-890ff4d07d5c.png"
+                    alt=""
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0" style={{ background: 'rgba(8,5,2,0.82)' }} />
+                </div>
+              )}
+              <div className={`relative flex items-center gap-6 mb-10${ci > 0 ? ' pt-6 px-4' : ''}`}>
                 <div>
                   <h2 className="font-display text-3xl md:text-4xl" style={{ color: 'var(--gold-light)' }}>{century} Век</h2>
                   <p className="font-fell italic text-sm mt-1" style={{ opacity: 0.5 }}>{CENTURY_PERIODS[century]}</p>
@@ -523,7 +533,7 @@ export default function Index() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6${ci > 0 ? ' px-4 pb-6' : ''}`}>
                 {GARMENTS.filter(g => g.century === century).map((garment, i) => (
                   <GarmentCard
                     key={garment.id}
