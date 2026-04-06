@@ -88,7 +88,7 @@ const GARMENTS: Garment[] = [
     color: '#0e1a0e',
     accent: '#2a6a3a',
     emoji: '🍃',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Robe_%C3%A0_la_polonaise_MET_DP251143.jpg/400px-Robe_%C3%A0_la_polonaise_MET_DP251143.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/848ea8cb-61c9-4c36-a2cb-95c8f74cb010.png',
   },
   {
     id: 6,
@@ -102,7 +102,7 @@ const GARMENTS: Garment[] = [
     color: '#0a100a',
     accent: '#1a4a2a',
     emoji: '⚜️',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Court_coat_MET_DP251587.jpg/400px-Court_coat_MET_DP251587.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/86b2f77a-94db-444c-a844-b10829328e17.png',
   },
   {
     id: 7,
@@ -116,7 +116,7 @@ const GARMENTS: Garment[] = [
     color: '#12120a',
     accent: '#5a5a1a',
     emoji: '🏛️',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Evening_dress_MET_DP161454.jpg/400px-Evening_dress_MET_DP161454.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/31ff0570-f97d-4145-8165-679a220c479f.png',
   },
   {
     id: 8,
@@ -130,91 +130,21 @@ const GARMENTS: Garment[] = [
     color: '#081a0a',
     accent: '#1a5a1a',
     emoji: '🌿',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ball_gown_MET_DP251601.jpg/400px-Ball_gown_MET_DP251601.jpg',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/94d2e294-fc7c-45dc-b1d9-954aaba6daba.png',
   },
   {
     id: 9,
     century: 'XIX',
-    title: 'Платье с турнюром',
-    subtitle: 'Поздний викторианизм',
-    year: '1883-е',
-    fabric: 'Бархат, атлас, кружево',
-    origin: 'Франция, Париж',
-    description: 'Элегантное вечернее платье позднего викторианства с характерным турнюром — накладкой сзади. Декольте отделано брюссельским кружевом, лиф украшен гранатовыми камнями.',
-    color: '#1a0810',
-    accent: '#5a1a30',
-    emoji: '💎',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Evening_dress_MET_DP251619.jpg/400px-Evening_dress_MET_DP251619.jpg',
-  },
-  {
-    id: 10,
-    century: 'XVIII',
-    title: 'Платье рококо с бантами',
-    subtitle: 'Придворный наряд Людовика XVI',
-    year: '1775-е',
-    fabric: 'Голубой шёлк, кружево, розовые банты',
-    origin: 'Франция, Версаль',
-    description: 'Изысканное платье придворной дамы эпохи Людовика XVI. Нежно-голубой шёлк усыпан розовыми атласными бантами и слоями кружева. Причёска с перьями и розами в стиле «pouf» — дань моде Марии-Антуанетты.',
-    color: '#0e1520',
-    accent: '#2a4a7a',
-    emoji: '🎀',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/7cd85fb1-bb3d-4c6d-a5bd-08f5eb090942.png',
-  },
-  {
-    id: 11,
-    century: 'XVIII',
-    title: 'Мундир вельможи',
-    subtitle: 'Парадный костюм сановника',
-    year: '1780-е',
-    fabric: 'Бордовый бархат, золотое шитьё',
-    origin: 'Франция, Версаль',
-    description: 'Великолепный парадный мундир придворного сановника. Тёмно-бордовый бархат расшит золотыми цветочными орнаментами, грудь украшена орденской звездой. Кружевной жабо и трость с золотым набалдашником завершают облик.',
-    color: '#1a0505',
-    accent: '#7a1a0a',
-    emoji: '⚜️',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/bbbab29e-ced1-4b75-9276-3726121333f0.png',
-  },
-  {
-    id: 12,
-    century: 'XIX',
-    title: 'Платье ампир с диадемой',
-    subtitle: 'Бальный наряд регентства',
-    year: '1810-е',
-    fabric: 'Белый муслин, шёлковые перчатки',
+    title: 'Фрак джентльмена',
+    subtitle: 'Мужская мода эпохи романтизма',
+    year: '1840-е',
+    fabric: 'Чёрное сукно, шёлковые лацканы',
     origin: 'Англия, Лондон',
-    description: 'Нежное бальное платье эпохи Регентства в стиле ампир. Высокая талия, прозрачные рукава с кружевной отделкой, белые перчатки и жемчужная диадема — образ утончённой английской аристократки.',
-    color: '#12100a',
-    accent: '#4a3a1a',
-    emoji: '👑',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/aee0bffb-39c3-4699-be94-d39182add9cd.png',
-  },
-  {
-    id: 13,
-    century: 'XIX',
-    title: 'Бальное платье с кринолином',
-    subtitle: 'Викторианский бал',
-    year: '1855-е',
-    fabric: 'Шёлк, чёрный бархат, кружево',
-    origin: 'Франция, Париж',
-    description: 'Роскошное чёрно-белое бальное платье на кринолине с пышными воланами. Чёрные бархатные банты контрастируют с кремовым шёлком. Открытые плечи и жемчужное колье — квинтэссенция парижской бальной моды.',
-    color: '#0a0a0a',
-    accent: '#3a3020',
-    emoji: '🖤',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/3e715f99-74e5-4352-ae5f-d86194572e68.png',
-  },
-  {
-    id: 14,
-    century: 'XIX',
-    title: 'Большой бал',
-    subtitle: 'Вальс в императорском дворце',
-    year: '1870-е',
-    fabric: 'Тюль, атлас, живые цветы',
-    origin: 'Вена, Австро-Венгрия',
-    description: 'Великолепная картина императорского бала — танцующие пары в пышных бальных платьях под золотыми люстрами дворца. Нежные оттенки розового, персикового и голубого шёлка кружатся в вальсе под звуки оркестра.',
-    color: '#1a0e05',
-    accent: '#8a5a1a',
-    emoji: '💃',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/fb8dd79e-2055-472f-a8b1-3616934f6d48.png',
+    description: 'Безупречный чёрный фрак — визитная карточка английского денди эпохи романтизма. Приталенный силуэт с длинными фалдами, шёлковые лацканы и белоснежная рубашка с галстуком-бабочкой стали каноном мужской элегантности XIX века.',
+    color: '#0a0a10',
+    accent: '#2a2a40',
+    emoji: '🎩',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/20ca60dc-cbba-468a-be6a-8dffc6443340.png',
   },
 ];
 
@@ -580,11 +510,13 @@ export default function Index() {
             <section key={century} className="mb-20 relative rounded-lg overflow-hidden">
               <div className="absolute inset-0 -mx-2 rounded-lg overflow-hidden pointer-events-none">
                 <img
-                  src="https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/14c45784-2710-45e4-a9b5-890ff4d07d5c.png"
+                  src={century === 'XIX'
+                    ? 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/20ca60dc-cbba-468a-be6a-8dffc6443340.png'
+                    : 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/14c45784-2710-45e4-a9b5-890ff4d07d5c.png'}
                   alt=""
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0" style={{ background: 'rgba(8,5,2,0.82)' }} />
+                <div className="absolute inset-0" style={{ background: century === 'XIX' ? 'rgba(5,3,1,0.88)' : 'rgba(8,5,2,0.82)' }} />
               </div>
               <div className="relative flex items-center gap-6 mb-10 pt-6 px-4">
                 <div>
