@@ -144,7 +144,7 @@ const GARMENTS: Garment[] = [
     color: '#0a0a10',
     accent: '#2a2a40',
     emoji: '🎩',
-    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/20ca60dc-cbba-468a-be6a-8dffc6443340.png',
+    image: 'https://cdn.poehali.dev/projects/067883e8-1fda-446b-875d-9c9a19b06c2c/bucket/1d9f7baf-589a-46f3-8154-88857630a70c.png',
   },
 ];
 
